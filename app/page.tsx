@@ -7,9 +7,9 @@ import { Download } from "lucide-react";
 import React, { useState } from "react";
 
 const page = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [content, setContent] = useState<any[]>([]);
-  const [file, setFile] = React.useState<File | null>(null);
+  const [file, setFile] = useState<File | null>(null);
 
   const handleSubmit = async () => {
     if (!file) return;
