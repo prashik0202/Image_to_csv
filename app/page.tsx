@@ -6,7 +6,7 @@ import axios from "axios";
 import { Download } from "lucide-react";
 import React, { useState } from "react";
 
-const page = () => {
+const HomePage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [content, setContent] = useState<any[]>([]);
   const [file, setFile] = useState<File | null>(null);
@@ -80,4 +80,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;
