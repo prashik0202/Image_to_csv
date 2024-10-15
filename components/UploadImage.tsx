@@ -1,5 +1,7 @@
 "use client";
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -61,7 +63,10 @@ const UploadImage = ({
         </div>
         <div className="aspect-video rounded-md border-2 border-dashed border-gray-300 flex items-center justify-center">
           {preview ? (
-            <img
+            <Image
+              height={0}
+              width={0}
+              sizes="100vw"
               src={preview}
               alt="Preview"
               className="h-full w-full object-contain"
